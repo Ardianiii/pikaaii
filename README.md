@@ -1,0 +1,2 @@
+PikaAI
+Pika Ai is an AI-powered marketplace and platform where businesses and creators can buy, sell, and manage AI-generated websites, content, and digital services. It helps users create websites, themes, and templates, automate content, optimize performance, and personalize user experiences — all using AI — while connecting them with a marketplace of ready-made digital solutions. Pika Ai is currently in development, with more features and improvements coming soon.
