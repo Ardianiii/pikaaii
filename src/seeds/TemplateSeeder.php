@@ -21,7 +21,8 @@ $templates = [
         'type' => 'features',
         'category' => 'basic',
         'preview_image' => null,
-        'content' => json_encode([
+        'content' => json_encode([require_once __DIR__ . '/../controllers/ProjectController.php';
+
             'type' => 'features',
             'content' => [
                 ['title' => 'Fast', 'desc' => 'Build websites quickly with AI templates.'],
