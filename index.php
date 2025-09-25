@@ -6,7 +6,7 @@ require_once __DIR__ . '/src/config/database.php';
 require_once __DIR__ . '/src/controllers/AuthController.php';
 
 // Create AuthController instance once here
-$auth = new AuthController($pdo);
+$auth = new AuthController($pdo);ss
 
 $page = $_GET['page'] ?? 'home';
 
