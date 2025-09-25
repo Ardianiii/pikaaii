@@ -7,7 +7,7 @@ if (!isset($_SESSION['user_id'])) {
     exit;
 }
 
-require_once __DIR__ . '/src/controllers/ProjectController.php';
+require_once dirname(__DIR__) . '/controllers/ProjectController.php';
 $projectController = new ProjectController($pdo);
 $projects = $projectController->getUserProjects($_SESSION['user_id']);
 

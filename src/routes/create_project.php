@@ -9,7 +9,7 @@ if (!isset($_SESSION['user_id'])) {
 
 $title = 'Create New Project - PikaAi';
 
-require_once __DIR__ . '/src/controllers/ProjectController.php';
+require_once __DIR__ . '/../controllers/ProjectController.php';
 $projectController = new ProjectController($pdo);
 
 $error = '';

@@ -1,11 +1,16 @@
-<!-- templates/login.php -->
+<h2>Login</h2>
+
 <?php if (!empty($error)): ?>
-    <div class="alert"><?= htmlspecialchars($error) ?></div>
+    <p style="color:red;"><?= htmlspecialchars($error) ?></p>
 <?php endif; ?>
 
 <form method="POST" action="index.php?page=login">
-    <input type="email" name="email" placeholder="Email" required>
-    <input type="password" name="password" placeholder="Password" required>
+    <label>Email:</label>
+    <input type="email" name="email" required>
+    
+    <label>Password:</label>
+    <input type="password" name="password" required>
+    
     <button type="submit">Login</button>
 </form>
 

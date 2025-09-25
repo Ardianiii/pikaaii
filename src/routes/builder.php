@@ -6,8 +6,8 @@ if (!isset($_SESSION['user_id'])) {
     header('Location: index.php?page=login');
     exit;
 }
+require_once __DIR__ . '/../controllers/ProjectController.php';
 
-require_once __DIR__ . '/src/controllers/ProjectController.php';
 
 $projectId = $_GET['project_id'] ?? null;
 if (!$projectId) {

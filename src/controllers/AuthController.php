@@ -18,7 +18,17 @@ class AuthController {
             return ['status' => false, 'message' => 'Invalid input'];
         }
 
-        return $this->userModel->create($name, $email, $password);
+        $user = $this->userModel->create($name, $email, $password);
+
+        if ($user) {
+            return [
+                'status' => true,
+                'message' => 'Registered successfully',
+                'user'   => $user
+            ];
+        }
+
+        return ['status' => false, 'message' => 'Registration failed'];
     }
 
     public function login($email, $password) {
@@ -26,9 +36,16 @@ class AuthController {
         if ($user) {
             $_SESSION['user_id'] = $user['id'];
             $_SESSION['user_name'] = $user['name'];
-            return ['status' => true, 'message' => 'Logged in successfully'];
+            return [
+                'status' => true,
+                'message' => 'Logged in successfully',
+                'user' => $user
+            ];
         }
-        return ['status' => false, 'message' => 'Invalid credentials'];
+        return [
+            'status' => false,
+            'message' => 'Invalid credentials'
+        ];
     }
 
     public function logout() {
